@@ -30,6 +30,7 @@ class TipCalculatorViewController: UIViewController {
         
         print("Bill Total : \(tipCalculator.billTotal)")
         print("Tip Percent : \(tipPercentView.tipPercent)")
+        print("Tip button count : \(tipPercentView.tipButtons.count)")
 
     }
 

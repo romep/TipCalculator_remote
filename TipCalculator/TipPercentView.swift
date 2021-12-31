@@ -18,6 +18,8 @@ class TipPercentView: UIView {
     
     @IBOutlet weak var fifteenPercentButton: UIButton!
     
+    @IBOutlet var tipButtons: [UIButton]!
+    
     override init(frame: CGRect) { // for creating view in code
         super.init(frame: frame)
         commonInit()
@@ -32,26 +34,23 @@ class TipPercentView: UIView {
         Bundle.main.loadNibNamed("TipPercentView", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
-//        contentView.translatesAutoresizingMaskIntoConstraints = false
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        
+    }
 
-//        let theView = Bundle.main.loadNibNamed("TipPercentView", owner: self, options: nil)![0] as! UIView
-////
-////        self.addSubview(theView)
-//        self.addSubview(contentView)
-//        theView.frame = self.bounds
+    private func setupButtons() {
+//        //use the array index as the tag value so we can identify buttons
+//        var buttonIndex = 0
+//        for button in tipButtons {
+//            button.tag = buttonIndex
+//            buttonIndex += 1
+//        }
     }
     
-//    class func instanceFromNib() -> TipPercentView! {
-//        let view = UINib(nibName: "TipPercentView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! TipPercentView
-//        return view
-//    }
-//    func setTip(tip: Double) {
-//        tipPercent = tip
-//    }
-//
-//    func selectedTipPercent() -> Double {
-//        return tipPercent
-//    }
+    @IBAction func handleTipPercentButtonTouchUp(_ sender: UIButton) {
+        sender.tintColor = .orange
+        
+    }
+    
+  
+    
 }
