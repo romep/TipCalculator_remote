@@ -49,11 +49,23 @@ class TipPercentView: UIView {
     private func selectTipButton(selectedButton: UIButton) {
         // "turn off" all the buttons
         for aButton in tipButtons {
-            aButton.tintColor = .gray
+//            aButton.tintColor = .white
+////            aButton.setTitleColor(UIColor(named: "Tip_DarkBlue"), for: .normal)
+//            aButton.setTitleColor(.black, for: .normal)
+            aButton.backgroundColor = .white
+            aButton.setTitleColor(.blue, for: .normal)
+            aButton.layer.cornerRadius = 16.0
+            
         }
         
         // "turn on" selected button
-        selectedButton.tintColor = .orange
+//        selectedButton.tintColor = UIColor(named: "Tip_DarkBlue")
+        selectedButton.backgroundColor = UIColor(named: "Tip_DarkBlue")
+        selectedButton.setTitleColor(.white, for: .normal)
+        selectedButton.layer.cornerRadius = 10.0
+  
+        
+   
         
         tipPercent = selectedButton.tag
         delegate?.tipPercentChanged(tipPercent: self.tipPercent)

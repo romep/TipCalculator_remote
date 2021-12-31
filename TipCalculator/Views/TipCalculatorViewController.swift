@@ -28,7 +28,6 @@ class TipCalculatorViewController: UIViewController, TipPercentViewDelegate {
     private func initialViewSetup() {
         tipPercentView.delegate = self
         
-        billAmountTextField.delegate = self
         billAmountTextField.text = ""
         billAmountTextField.keyboardType = .decimalPad
         billAmountTextField.becomeFirstResponder()
@@ -44,10 +43,6 @@ class TipCalculatorViewController: UIViewController, TipPercentViewDelegate {
         
         let tipCalculator = TipCalculator(billAmount: theBillAmount, tipPercent: tipPercentView.tipPercent)
         
-//        print("Bill Amount : \(billAmount)")
-//        print("Tip Percent : \(tipPercentView.tipPercent)")
-//        print("Bill Total : \(tipCalculator.billTotal)")
-//        print("Tip Amount : \(tipCalculator.tipAmount)")
         
         billTotalLabel.text = tipCalculator.billTotalAsString
         tipAmountLabel.text = tipCalculator.tipAmountAsString
@@ -62,22 +57,10 @@ class TipCalculatorViewController: UIViewController, TipPercentViewDelegate {
     @IBAction func handleTextFieldEditingChanged(_ sender: UITextField) {
         print(#function)
         
-        print(sender.text)
         updateViews()
     }
     
     
 }
 
-// MARK: - UITextFieldDelegate
 
-extension TipCalculatorViewController: UITextFieldDelegate {
-
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        print(#function)
-        
-        return true
-    }
-    
-    
-}

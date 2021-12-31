@@ -22,7 +22,7 @@ struct TipCalculator {
         if tipAmount == 0 {
             return ""
         } else {
-            return String(tipAmount)
+            return "$" + String(tipAmount)
         }
     }
     
@@ -34,7 +34,7 @@ struct TipCalculator {
         if billTotal == 0 {
             return ""
         } else {
-            return String(billTotal)
+            return "$" + String(billTotal)
         }
     }
 }
