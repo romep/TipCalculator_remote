@@ -10,15 +10,18 @@
 import UIKit
 
 
-
+protocol TipPercentViewDelegate: AnyObject {
+    func tipPercentChanged(tipPercent: Int)
+}
 
 class TipPercentView: UIView {
-    var tipPercent = 6.0
     @IBOutlet var contentView: UIView!
-    
     @IBOutlet weak var fifteenPercentButton: UIButton!
-    
     @IBOutlet var tipButtons: [UIButton]!
+    
+    var tipPercent = 15
+    
+    weak var delegate: TipPercentViewDelegate?
     
     override init(frame: CGRect) { // for creating view in code
         super.init(frame: frame)
@@ -35,20 +38,29 @@ class TipPercentView: UIView {
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        
+        initialTipButtonSetup()
     }
 
-    private func setupButtons() {
-//        //use the array index as the tag value so we can identify buttons
-//        var buttonIndex = 0
-//        for button in tipButtons {
-//            button.tag = buttonIndex
-//            buttonIndex += 1
-//        }
+    private func initialTipButtonSetup() {
+        selectTipButton(selectedButton: fifteenPercentButton)
+    }
+    
+    private func selectTipButton(selectedButton: UIButton) {
+        // "turn off" all the buttons
+        for aButton in tipButtons {
+            aButton.tintColor = .gray
+        }
+        
+        // "turn on" selected button
+        selectedButton.tintColor = .orange
+        
+        tipPercent = selectedButton.tag
+        delegate?.tipPercentChanged(tipPercent: self.tipPercent)
     }
     
     @IBAction func handleTipPercentButtonTouchUp(_ sender: UIButton) {
-        sender.tintColor = .orange
-        
+        selectTipButton(selectedButton: sender)
     }
     
   
