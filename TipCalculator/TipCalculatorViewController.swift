@@ -8,8 +8,9 @@
 import UIKit
 
 class TipCalculatorViewController: UIViewController {
-    //pwr: do I need to worry about making this weak var?
-    weak var tipPercentView: TipPercentView?
+    
+    @IBOutlet weak var tipPercentView: TipPercentView!
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,23 +21,15 @@ class TipCalculatorViewController: UIViewController {
     }
     
     private func initialViewSetup() {
-         
-        tipPercentView = TipPercentView.instanceFromNib()
-        view.addSubview(tipPercentView!)
-        
-        
-        print("Tip Percent : \(tipPercentView!.selectedTipPercent())")
-
+        tipPercentView.tipPercent = 999
     }
     
     private func updateViews() {
         print(#function)
         let tipCalculator = TipCalculator(billAmount: 100.0, tipPercent: 10.0)
         
-//        tipPercentView?.setTip(tip: 89.9)
-        tipPercentView?.tipPercent = 45.2
         print("Bill Total : \(tipCalculator.billTotal)")
-        print("Tip Percent : \(tipPercentView?.selectedTipPercent())")
+        print("Tip Percent : \(tipPercentView.tipPercent)")
 
     }
 
