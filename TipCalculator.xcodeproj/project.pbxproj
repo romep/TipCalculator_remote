@@ -16,6 +16,10 @@
 		5C181636277E85B3007BAE46 /* TipCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C181635277E85B3007BAE46 /* TipCalculatorTests.swift */; };
 		5C181640277E85B3007BAE46 /* TipCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C18163F277E85B3007BAE46 /* TipCalculatorUITests.swift */; };
 		5C181642277E85B3007BAE46 /* TipCalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C181641277E85B3007BAE46 /* TipCalculatorUITestsLaunchTests.swift */; };
+		5C18164F277E8800007BAE46 /* TipCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C18164E277E8800007BAE46 /* TipCalculatorViewController.swift */; };
+		5C181653277E89D4007BAE46 /* TipCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C181652277E89D4007BAE46 /* TipCalculator.swift */; };
+		5C181655277E96B7007BAE46 /* TipPercentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C181654277E96B7007BAE46 /* TipPercentView.xib */; };
+		5C181657277E981E007BAE46 /* TipPercentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C181656277E981E007BAE46 /* TipPercentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		5C18163B277E85B3007BAE46 /* TipCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C18163F277E85B3007BAE46 /* TipCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculatorUITests.swift; sourceTree = "<group>"; };
 		5C181641277E85B3007BAE46 /* TipCalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5C18164E277E8800007BAE46 /* TipCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculatorViewController.swift; sourceTree = "<group>"; };
+		5C181652277E89D4007BAE46 /* TipCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculator.swift; sourceTree = "<group>"; };
+		5C181654277E96B7007BAE46 /* TipPercentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipPercentView.xib; sourceTree = "<group>"; };
+		5C181656277E981E007BAE46 /* TipPercentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipPercentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +109,15 @@
 			children = (
 				5C18161E277E85B1007BAE46 /* AppDelegate.swift */,
 				5C181620277E85B1007BAE46 /* SceneDelegate.swift */,
+				5C18164E277E8800007BAE46 /* TipCalculatorViewController.swift */,
 				5C181622277E85B1007BAE46 /* ViewController.swift */,
 				5C181624277E85B1007BAE46 /* Main.storyboard */,
+				5C181654277E96B7007BAE46 /* TipPercentView.xib */,
 				5C181627277E85B3007BAE46 /* Assets.xcassets */,
 				5C181629277E85B3007BAE46 /* LaunchScreen.storyboard */,
 				5C18162C277E85B3007BAE46 /* Info.plist */,
+				5C181652277E89D4007BAE46 /* TipCalculator.swift */,
+				5C181656277E981E007BAE46 /* TipPercentView.swift */,
 			);
 			path = TipCalculator;
 			sourceTree = "<group>";
@@ -232,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C18162B277E85B3007BAE46 /* LaunchScreen.storyboard in Resources */,
+				5C181655277E96B7007BAE46 /* TipPercentView.xib in Resources */,
 				5C181628277E85B3007BAE46 /* Assets.xcassets in Resources */,
 				5C181626277E85B1007BAE46 /* Main.storyboard in Resources */,
 			);
@@ -260,7 +273,10 @@
 			files = (
 				5C181623277E85B1007BAE46 /* ViewController.swift in Sources */,
 				5C18161F277E85B1007BAE46 /* AppDelegate.swift in Sources */,
+				5C18164F277E8800007BAE46 /* TipCalculatorViewController.swift in Sources */,
+				5C181657277E981E007BAE46 /* TipPercentView.swift in Sources */,
 				5C181621277E85B1007BAE46 /* SceneDelegate.swift in Sources */,
+				5C181653277E89D4007BAE46 /* TipCalculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +461,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -473,6 +490,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
