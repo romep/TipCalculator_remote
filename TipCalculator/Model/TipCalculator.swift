@@ -17,7 +17,24 @@ struct TipCalculator {
     var tipAmount: Double {
         billAmount * Double(tipPercent) * (0.01)
     }
+    
+    var tipAmountAsString: String {
+        if tipAmount == 0 {
+            return ""
+        } else {
+            return String(tipAmount)
+        }
+    }
+    
     var billTotal: Double {
         billAmount + tipAmount
+    }
+
+    var billTotalAsString: String {
+        if billTotal == 0 {
+            return ""
+        } else {
+            return String(billTotal)
+        }
     }
 }

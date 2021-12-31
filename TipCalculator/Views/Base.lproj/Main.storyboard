@@ -22,10 +22,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="asdf" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="TRg-RA-OQQ">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="billAmount" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="TRg-RA-OQQ">
                                 <rect key="frame" x="0.0" y="113" width="414" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="handleTextFieldEditingChanged:" destination="maG-bq-c5S" eventType="editingChanged" id="wm5-Gq-xVg"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rjh-bz-w8T" userLabel="Tip Percent View Placeholder" customClass="TipPercentView" customModule="TipCalculator" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="167" width="414" height="108"/>
@@ -106,6 +109,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="billAmountTextField" destination="TRg-RA-OQQ" id="Lh6-L4-wvx"/>
                         <outlet property="billTotalLabel" destination="sKe-Lf-ivc" id="wUv-vF-0w3"/>
                         <outlet property="tipAmountLabel" destination="VDL-IQ-l2U" id="7dg-ac-pG6"/>
                         <outlet property="tipPercentView" destination="rjh-bz-w8T" id="BPA-Yk-Dtr"/>
