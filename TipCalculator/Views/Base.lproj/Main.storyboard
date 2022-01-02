@@ -38,7 +38,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P4G-rS-pg6" userLabel="Outputs View">
-                                <rect key="frame" x="0.0" y="304" width="414" height="120"/>
+                                <rect key="frame" x="0.0" y="304" width="414" height="300"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efg-Lu-HTZ">
                                         <rect key="frame" x="30" y="20" width="92" height="21"/>
@@ -66,8 +66,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="billTotal" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKe-Lf-ivc">
-                                        <rect key="frame" x="334" y="92" width="59" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="290.5" y="86" width="102.5" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -76,7 +76,7 @@
                                 <constraints>
                                     <constraint firstItem="efg-Lu-HTZ" firstAttribute="top" secondItem="P4G-rS-pg6" secondAttribute="top" constant="20" id="0af-xV-p29"/>
                                     <constraint firstItem="aHO-iA-RYT" firstAttribute="leading" secondItem="P4G-rS-pg6" secondAttribute="leading" constant="30" id="3IH-IG-Qoc"/>
-                                    <constraint firstAttribute="height" constant="120" id="6is-pZ-kiV"/>
+                                    <constraint firstAttribute="height" constant="300" id="6is-pZ-kiV"/>
                                     <constraint firstItem="aHO-iA-RYT" firstAttribute="top" secondItem="efg-Lu-HTZ" secondAttribute="bottom" constant="25" id="Ghn-5O-nlP"/>
                                     <constraint firstItem="efg-Lu-HTZ" firstAttribute="leading" secondItem="P4G-rS-pg6" secondAttribute="leading" constant="30" id="Hhi-YZ-LAm"/>
                                     <constraint firstAttribute="trailing" secondItem="VDL-IQ-l2U" secondAttribute="trailing" constant="21" id="JYp-ik-sVR"/>

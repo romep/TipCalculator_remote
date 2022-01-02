@@ -53,9 +53,9 @@ class TipPercentView: UIView {
 ////            aButton.setTitleColor(UIColor(named: "Tip_DarkBlue"), for: .normal)
 //            aButton.setTitleColor(.black, for: .normal)
             aButton.backgroundColor = .white
-            aButton.setTitleColor(.blue, for: .normal)
+            aButton.setTitleColor(UIColor(named: "Tip_DarkBlue"), for: .normal)
             aButton.layer.cornerRadius = 16.0
-            
+            setShadowOn(button: aButton)
         }
         
         // "turn on" selected button
@@ -63,12 +63,20 @@ class TipPercentView: UIView {
         selectedButton.backgroundColor = UIColor(named: "Tip_DarkBlue")
         selectedButton.setTitleColor(.white, for: .normal)
         selectedButton.layer.cornerRadius = 10.0
-  
+        setShadowOn(button: selectedButton)
+
         
    
         
         tipPercent = selectedButton.tag
         delegate?.tipPercentChanged(tipPercent: self.tipPercent)
+    }
+    
+    private func setShadowOn(button: UIButton){
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOffset = CGSize(width: 0, height: 1 )
+        button.layer.shadowOpacity = 0.48
+        button.layer.shadowRadius = 1.0
     }
     
     @IBAction func handleTipPercentButtonTouchUp(_ sender: UIButton) {

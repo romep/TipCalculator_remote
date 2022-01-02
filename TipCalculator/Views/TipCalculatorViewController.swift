@@ -30,10 +30,24 @@ class TipCalculatorViewController: UIViewController, TipPercentViewDelegate {
         
         billAmountTextField.text = ""
         billAmountTextField.keyboardType = .decimalPad
-        billAmountTextField.becomeFirstResponder()
-
+        
+        initialTextFieldSetup(textField: billAmountTextField)
+        
         tipAmountLabel.text = ""
         billTotalLabel.text = ""
+    }
+    
+    private func initialTextFieldSetup(textField: UITextField){
+        let overlay = UILabel()
+        overlay.text = " $"
+        overlay.font = UIFont.boldSystemFont(ofSize: 28.0)
+        overlay.textColor = UIColor(named: "Tip_DarkBlue")
+        
+        textField.leftView = overlay
+        textField.leftViewMode = .always
+
+        textField.becomeFirstResponder()
+
     }
     
     private func updateViews() {
