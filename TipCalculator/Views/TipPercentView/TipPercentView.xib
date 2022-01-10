@@ -22,19 +22,18 @@
             <rect key="frame" x="0.0" y="0.0" width="291" height="84"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tip Percent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2L-5e-NUC">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Percent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2L-5e-NUC">
                     <rect key="frame" x="0.0" y="0.0" width="291" height="17"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="C54-EG-eSt" userLabel="tip buttons HStack View">
-                    <rect key="frame" x="0.0" y="33" width="291" height="60"/>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="C54-EG-eSt" userLabel="tip buttons HStack View">
+                    <rect key="frame" x="0.0" y="25" width="291" height="60"/>
                     <subviews>
                         <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2x-dU-8Y7">
-                            <rect key="frame" x="0.0" y="0.0" width="91.5" height="60"/>
+                            <rect key="frame" x="0.0" y="0.0" width="93" height="60"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="60" id="D1X-Sv-oXT"/>
                                 <constraint firstAttribute="height" constant="60" id="tWn-km-zfu"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
@@ -46,10 +45,9 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IM-RB-wS9">
-                            <rect key="frame" x="99.5" y="0.0" width="92" height="60"/>
+                            <rect key="frame" x="101" y="0.0" width="99" height="60"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="B81-Hf-9FU"/>
-                                <constraint firstAttribute="width" constant="60" id="zxt-yC-NoG"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -60,9 +58,8 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BrY-fx-w2t">
-                            <rect key="frame" x="199.5" y="0.0" width="91.5" height="60"/>
+                            <rect key="frame" x="208" y="0.0" width="83" height="60"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="60" id="g4i-Zv-v7P"/>
                                 <constraint firstAttribute="height" constant="60" id="h1L-H6-Bmd"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
@@ -78,12 +75,12 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <constraints>
-                <constraint firstItem="C54-EG-eSt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2Nl-fN-Qb0"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="C54-EG-eSt" secondAttribute="trailing" id="8FG-wa-VsI"/>
+                <constraint firstItem="C54-EG-eSt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2Nl-fN-Qb0"/>
+                <constraint firstAttribute="trailing" secondItem="C54-EG-eSt" secondAttribute="trailing" id="8FG-wa-VsI"/>
                 <constraint firstItem="Y2L-5e-NUC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="A4o-8I-nkP"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Y2L-5e-NUC" secondAttribute="trailing" id="XwJ-BJ-D4y"/>
+                <constraint firstAttribute="trailing" secondItem="Y2L-5e-NUC" secondAttribute="trailing" id="XwJ-BJ-D4y"/>
                 <constraint firstItem="C54-EG-eSt" firstAttribute="top" secondItem="Y2L-5e-NUC" secondAttribute="bottom" constant="8" symbolic="YES" id="lJ3-c8-7Cm"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="Y2L-5e-NUC" secondAttribute="top" id="wfB-iF-Y7b"/>
+                <constraint firstAttribute="top" secondItem="Y2L-5e-NUC" secondAttribute="top" id="wfB-iF-Y7b"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="80.434782608695656" y="-158.70535714285714"/>
