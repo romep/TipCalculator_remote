@@ -13,13 +13,6 @@ struct TipCalculator {
     var billAmount: Double
     var tipPercent: Int //tip percent should be a number between 0 and 100
     
-//    var formatter: NumberFormatter {
-//        let theFormatter = NumberFormatter()
-//        theFormatter.numberStyle = .currency
-//        theFormatter.currencyCode = "usd"
-//        theFormatter.maximumFractionDigits = 2
-//        return theFormatter
-//    }
     
     //outputs
     var tipAmount: Double {

@@ -4,7 +4,7 @@
 //
 //  Created by Paula R on 12/30/21.
 //
-// Better description of using a custom view from a xib file
+// description of using a custom view from a xib file
 // https://betterprogramming.pub/swift-3-creating-a-custom-view-from-a-xib-ecdfe5b3a960
 
 import UIKit
@@ -35,6 +35,7 @@ class TipPercentView: UIView {
     
     private func commonInit() {
         Bundle.main.loadNibNamed("TipPercentView", owner: self, options: nil)
+         
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
@@ -49,9 +50,6 @@ class TipPercentView: UIView {
     private func selectTipButton(selectedButton: UIButton) {
         // "turn off" all the buttons
         for aButton in tipButtons {
-//            aButton.tintColor = .white
-////            aButton.setTitleColor(UIColor(named: "Tip_DarkBlue"), for: .normal)
-//            aButton.setTitleColor(.black, for: .normal)
             aButton.backgroundColor = .white
             aButton.setTitleColor(UIColor(named: "Tip_DarkBlue"), for: .normal)
             aButton.layer.cornerRadius = 16.0
@@ -59,10 +57,9 @@ class TipPercentView: UIView {
         }
         
         // "turn on" selected button
-//        selectedButton.tintColor = UIColor(named: "Tip_DarkBlue")
         selectedButton.backgroundColor = UIColor(named: "Tip_DarkBlue")
         selectedButton.setTitleColor(.white, for: .normal)
-        selectedButton.layer.cornerRadius = 10.0
+        selectedButton.layer.cornerRadius = 16.0
         setShadowOn(button: selectedButton)
 
         
